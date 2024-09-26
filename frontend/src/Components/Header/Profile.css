@@ -1,0 +1,160 @@
+/* Profile Container */
+.profile-container {
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    height: 600px;
+    margin: auto; /* Center the profile */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Profile Image with Hover Zoom */
+.profile-image {
+    width: 200px;                 
+    height: 200px;                
+    border-radius: 50%;           
+    margin-bottom: 20px;
+    margin-left: 10px;            
+    border: none;                 
+    object-fit: cover;            
+    object-position: center;      
+    image-rendering: auto;        
+    image-rendering: crisp-edges; 
+    background-color: transparent;
+    box-shadow: none;             
+    padding: 0;                   
+    
+    transition: transform 0.3s ease; /* Smooth transition when hovering */
+}
+
+.profile-image:hover {
+    transform: scale(1.2);         /* Zoom by 20% on hover */
+}
+
+/* Profile Name */
+.profile-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e74c3c; /* Highlight the name */
+}
+
+/* Button Section */
+.button-section {
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center; /* Center the buttons horizontally */
+    gap: 10px; /* Add spacing between each button */
+    margin-top: 10px;
+}
+
+/* Container for Buttons */
+.edit-container, .settings-container, .logout-container {
+    width: 100%; /* Ensure each button fills available space */
+    text-align: center;
+}
+
+/* Buttons */
+.edit-button, .logout-button {
+    width: 200px; /* Consistent width for buttons */
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover, .logout-button:hover {
+    background-color: #c0392b;
+}
+
+/* Settings Button */
+.settings-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center settings icon and text */
+}
+
+/* Settings Icon */
+.settings-icon {
+    font-size: 1.5rem;
+    color: #e74c3c;
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Add extra space between Settings and Logout for better visual separation */
+.logout-container {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Back Button */
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 200px; /* Ensure a consistent size */
+    margin: 0 auto 20px auto; /* Center the button */
+}
+
+.back-button:hover {
+    background-color: #ddd;
+}
+
+.back-button svg {
+    margin-right: 10px;
+}
+
+/* Responsive layout adjustments */
+@media screen and (min-width: 768px) {
+    /* Increase gap and margins slightly for larger screens */
+    .button-section {
+        gap: 15px; /* More space between buttons */
+        margin-top: 20px;
+    }
+
+    .edit-button, .logout-button, .back-button {
+        width: 250px; /* Wider buttons on larger screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ensure back button and others adjust on smaller screens */
+    .back-button {
+        width: 180px; /* Slightly smaller for mobile screens */
+    }
+
+    .edit-button, .logout-button {
+        width: 180px; /* Reduce button width for small screens */
+    }
+
+    .profile-container {
+        width: 90vw; /* Adjust container width on smaller screens */
+        height: auto; /* Let the container height adjust automatically */
+    }
+
+    .profile-image {
+        width: 150px; /* Smaller profile image on mobile */
+        height: 150px;
+    }
+
+    .profile-name {
+        font-size: 1.5rem; /* Slightly smaller name text */
+    }
+}

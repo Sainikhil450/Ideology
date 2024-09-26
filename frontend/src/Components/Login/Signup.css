@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --primary-color: #f56f00; /* Primary Orange Color */
+  --secondary-color: #f5f5f5;
+  --text-color: #666563;
+  --text-color-secondary: #545454;
+  --heading-color: #0b0a0a;
+  --secondary-heading: #424240;
+  --layout-background-color: #fef5ec;
+  --font-family: "Poppins", sans-serif;
+
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.75rem;
+  --font-size-h4: 1.5rem;
+  --font-size-h5: 1.25rem;
+  --font-size-h6: 1rem;
+
+  --font-size-p: 1rem;
+}
+
+body {
+  font-family: var(--font-family);
+  background-image: url('../../Images/lg2.jpg'); /* Same background image for consistency */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.signup-container {
+  background-color: rgba(212, 211, 211, 0.7); /* Semi-transparent */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+  height: 85vh;
+  margin-bottom: 20px;
+}
+
+.signup-container h2 {
+  font-size: var(--font-size-h2); /* Font size consistency */
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  margin-top: 0.2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-container input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: var(--font-size-p);
+  margin-bottom: 2px;
+}
+
+.signup-container input:focus {
+  border-color: var(--primary-color); /* Focus state for inputs */
+  outline: none;
+}
+
+.signup-container button {
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: var(--font-size-h5);
+}
+
+.signup-container button:hover {
+  background-color: #e55b00; /* Hover effect */
+}
+
+.link {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #e55b00;
+}
+
+/* Loading animation styles */
+.loading-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-animation img {
+  width: 100px; /* Set width for the buffering GIF */
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.loading-animation p {
+  font-size: var(--font-size-h5);
+  color: var(--text-color);
+  margin: 0;
+}
+
+.login-link {
+  margin-top: 1rem; /* Add some spacing above the link */
+  font-size: var(--font-size-p); /* Consistent font size */
+  color: var(--primary-color); /* Color to match your theme */
+}
+
+.login-link a {
+  text-decoration: none; /* Remove underline */
+  color: var(--primary-color); /* Ensure it matches your theme */
+}
+
+.login-link a:hover {
+  color: #e55b00; /* Change color on hover */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --primary-color: #f56f00;
+  --secondary-color: #f5f5f5;
+  --text-color: #666563;
+  --text-color-secondary: #545454;
+  --heading-color: #0b0a0a;
+  --secondary-heading: #424240;
+  --layout-background-color: #fef5ec;
+  --font-family: "Poppins", sans-serif;
+
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.75rem;
+  --font-size-h4: 1.5rem;
+  --font-size-h5: 1.25rem;
+  --font-size-h6: 1rem;
+
+  --font-size-p: 1rem;
+}
+
+body {
+  font-family: var(--font-family);
+  background-image: url('../../Images/lg2.jpg'); /* Correct local image path */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: rgba(212, 211, 211, 0.7); /* Semi-transparent white */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h2 {
+  font-size: var(--font-size-h2); /* Size consistency */
+  font-weight: 700; /* Bold */
+  color: #f56f00; /* Color */
+  margin-bottom: 0.5rem; /* Margin */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+ 
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-family: var(--font-family);
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  border-radius: 5px;
+  font-size: var(--font-size-h5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e55b00;
+}
+
+.link {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #e55b00;
+}
+
+/* Loading animation styles */
+.loading-animation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-animation img {
+  width: 100px; /* Set width for the buffering GIF */
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.loading-animation p {
+  font-size: var(--font-size-h5);
+  color: var(--text-color);
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

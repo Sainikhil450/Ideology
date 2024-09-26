@@ -1,0 +1,186 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif; /* Use Open Sans */
+}
+
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.home-content {
+    flex: 1; /* Ensures the content takes up all the available space */
+}
+
+.footer {
+    flex-shrink: 0; /* Ensures the footer stays at the bottom */
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 110vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+
+
+.intro-section {
+    background: linear-gradient(135deg, #e0e0e0, #b0bec5); /* Gradient background */
+}
+.video-section .video-player {
+    width: 100%;
+    height: auto;
+   
+}
+.video-section{
+    margin-bottom: 10px;
+}
+.idea-section {
+    background-color: rgba(0, 0, 0, 0.8); /* Apply a black shade background color with 80% opacity */
+    color: #ffffff; /* White text color for contrast */
+    padding: 2rem;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Dark shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+/* Hover effect to make the section pop */
+.idea-section:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.idea-section h3 {
+    font-size: 3rem; /* Increase font size for more impact */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+.idea-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 600px; /* Limit the width of the paragraph */
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+.submit-idea-button {
+    background-color: #007bff; /* Blue background color */
+    color: #ffffff; /* White text color */
+    border: none; /* No border */
+    padding: 0.75rem 1.5rem; /* Padding for button size */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    animation: pulse 2s infinite; /* Pulsing animation */
+}
+
+/* Hover effect for the button */
+.submit-idea-button:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+/* Keyframe animation for pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .intro-section p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        margin-bottom: 1.5rem; /* Adjust margin for smaller screens */
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        margin-bottom: 1rem; /* Adjusted margin for smaller screens */
+    }
+}
+.intro-section {
+    background: linear-gradient(135deg, #ffffff, #f5f5f5); /* Softer gradient background */
+    padding: 5rem; /* Reduced padding */
+    margin-top: 62px;
+    margin-bottom: 20px;
+    
+    
+    width: 100vw; /* Full viewport width */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    max-width: 100%; /* Remove width constraint */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center text */
+    background-image: url('../../Images/intro.jpeg'); /* Add a background image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the background image */
+}
+
+.intro-section h2 {
+    font-size: 3.5rem; /* Larger title font size */
+    color: #131313; /* Darker text color */
+    margin-bottom: 1rem;
+    margin-left: 500px;
+    text-align: center; /* Center title text */
+}
+
+.intro-section p {
+    font-size: 1.6rem; /* Make paragraph slightly larger */
+    line-height: 1.8; /* Increased line height for readability */
+    color: #555; /* Softer dark text color */
+    max-width: 800px; /* Constrain the width of the paragraph */
+    margin-left: 600px;
+    margin-right: auto;
+}
+
+.intro-section:hover {
+    transform: scale(1.01); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section {
+        padding: 3rem; /* Adjust padding for smaller screens */
+    }
+
+    .intro-section h2 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .intro-section p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+}

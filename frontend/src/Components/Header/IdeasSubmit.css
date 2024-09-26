@@ -1,0 +1,193 @@
+/* Keyframe animation for fading in elements */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
+/* Keyframe animation for sliding in from the bottom */
+@keyframes slideInFromBottom {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+/* Keyframe animation for celebration effect */
+@keyframes celebration {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Apply the fadeIn animation */
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+  
+/* Apply the slideInFromBottom animation */
+.animate-slideInFromBottom {
+    animation: slideInFromBottom 1s ease-in-out;
+}
+
+/* Apply the celebration animation */
+.animate-celebration {
+    animation: celebration 0.6s ease-in-out;
+}
+
+/* Container for the form */
+.fullscreen-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+    background-image: url('../../Images/id.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+}
+  
+/* Content box styling with background image */
+.max-w-xl {
+    height: 75vh;
+    width: 90%; /* Full width on small screens */
+    max-width: 600px; /* Adjusted to a more reasonable maximum width */
+    padding: 2rem; /* Adjust padding as needed */
+    background-color: rgba(210, 210, 210, 0.7); /* Semi-transparent background color */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    max-height: 80vh; /* Limit the height of the container */
+    animation: slideInFromBottom 1s ease-in-out; /* Apply sliding animation */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 60px;
+    
+}
+  
+/* Title styling */
+.text-3xl {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    font-weight: bold; /* Bold text */
+    text-align: center;
+}
+  
+/* Paragraph styling */
+.text-sm {
+    font-size: 0.875rem; /* Adjust font size */
+}
+  
+.text-gray-600 {
+    color: #3f659d; /* Gray color */
+}
+  
+/* Form elements styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between form elements */
+}
+  
+/* Input and textarea styling */
+input, textarea, select {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Adjust padding */
+    border: 1px solid #e2e8f0; /* Light border color */
+    border-radius: 0.375rem; /* Rounded corners */
+}
+  
+/* Styling for the textarea */
+textarea {
+    resize: none; /* Disable resize */
+}
+  
+/* Button styling */
+button {
+    background-color: #3182ce; /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 0.75rem; /* Adjust padding */
+    border: none; /* Remove default border */
+    border-radius: 0.375rem; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease-in-out, transform 0.6s ease-in-out; /* Smooth transition for hover and animation */
+}
+  
+button:hover {
+    background-color: #2b6cb0; /* Darker blue on hover */
+}
+  
+/* Media Queries for responsive design */
+@media (min-width: 768px) {
+    .text-3xl {
+        font-size: 2rem; /* Larger font size for tablets and above */
+    }
+}
+  
+@media (min-width: 1024px) {
+    .fullscreen-container {
+        width: 100vw; /* Full width on larger screens */
+    }
+
+    .max-w-xl {
+        width: 80%; /* Adjust width for larger screens */
+        padding: 2.5rem; /* Increase padding on larger screens */
+    }
+}
+/* Add styles for the new form fields */
+input[type="text"], input[type="tel"], input[type="file"], select {
+    width: 100%; /* Full width */
+    padding: 0.75rem; /* Adjust padding */
+    border: 1px solid #e2e8f0; /* Light border color */
+    border-radius: 0.375rem; /* Rounded corners */
+    margin-bottom: 1rem; /* Space below each input */
+}
+
+/* Styling for idea boxes in the gallery */
+.ideas-gallery {
+    padding: 2rem;
+}
+
+.ideas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.idea-box {
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.375rem;
+    background-color: #f9f9f9;
+}
+
+.idea-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.idea-name, .idea-address {
+    font-size: 1rem;
+    color: #333;
+}
+button.sub {
+    background-color: #f56f00;
+    color: #ffffff;
+    padding: 0.75rem 2rem; /* Add padding to both sides */
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.6s ease-in-out;
+    align-self: center; /* Center the button */
+}
+
+button.sub:hover {
+    background-color: #f56f00;
+}

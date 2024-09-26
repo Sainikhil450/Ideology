@@ -1,0 +1,76 @@
+/* src/Components/Footer.css */
+.footer {
+    background-color: #181818;
+    color: #fff;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .footer-section h2, .footer-section h3 {
+    color: #ff5c00;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p, .footer-section a {
+    color: #ccc;
+    margin: 8px 0;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #ff5c00;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    color: #ccc;
+    margin-right: 15px;
+    font-size: 20px;
+  }
+  
+  .social-icons a:hover {
+    color: #ff5c00;
+  }
+  
+  .footer-section input[type="email"] {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .footer-section button {
+    padding: 10px;
+    background-color: #ff5c00;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .footer-section button i {
+    margin-left: 5px;
+  }
+  
+  .footer-section button:hover {
+    background-color: #ff7630;
+  }
